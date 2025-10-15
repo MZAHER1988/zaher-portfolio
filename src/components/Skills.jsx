@@ -12,84 +12,93 @@ import in_React from "../assets/physics.png"
 import python from "../assets/python.png"
 import wordPress from "../assets/wordpress.png"
 import git from "../assets/github-100.png"
+import tailwind_css from '../assets/tailwind-css.png'
 
 
 export default function Skills() {
   return (
     <section id="skills" className="relative overflow-hidden text-white body-font flex flex-col">
-        <div className="container flex flex-wrap px-5 py-24 mx-auto items-center md:flex-row flex-col ">
+        <div className="container flex flex-wrap px-5 py-24 mx-auto items-center md:flex-row flex-col">
             <div data-aos="fade-up" data-aos-delay="200" 
-            className="md:w-1/2 md:pr-12 md:py-8 md:border-r md:border-b-0 mb-20 md:mb-0 pd-10 border-b 
-            border-orange-400 text-center ">
+                className="md:w-1/2 md:pr-12 md:py-8 md:border-r md:border-b-0 mb-20 md:mb-0 pd-10 border-b 
+                border-orange-400 text-center ">
                 <h1 data-aos="fade-right" data-aos-delay="500" 
-                className="sm:text-4xl text-2xl font-medium title-font mb-2 text-white">
+                    className="sm:text-4xl text-2xl font-medium title-font mb-2 text-orange-500">
                     Skills
                 </h1>
                 <p data-aos="fade-right" data-aos-delay="500" className="leading-relaxed text-base">
-                    Proficient in HTML, CSS, JavaScript, and React for front-end development. 
-                    Skilled in Node.js, Express.js, and MongoDB for back-end development. 
-                    Experienced with RESTful APIs, Git version control, and responsive web design. 
-                    Strong problem-solving abilities and a passion for continuous 
-                    learning in web development technologies.
+                    I have experience working with various programming languages and technologies across both front-end and back-end development. 
+                    I build web applications using <strong>JavaScript</strong>, <strong>C#</strong>, <strong>HTML</strong>, <strong>CSS</strong>, 
+                    <strong>Java</strong>, <strong>PHP</strong>, <strong>Python</strong>, and <strong>SQL/MySQL</strong>, 
+                    and develop dynamic solutions with <strong>Node.js</strong> and <strong>React</strong>. <br></br> <br />
+
+                    I also work with <strong>WordPress</strong> to create content-driven websites, use <strong>Git</strong> for version control, 
+                    and apply <strong>Tailwind CSS</strong> to build modern and responsive interfaces. 
+                    I’m continuously developing my skills through new projects and hands-on learning.
+  
                 </p>
             </div>
             <div data-aos="fade-left" data-aos-delay="500" className="flex flex-col md:w-1/2 md:pl-12">
-            <nav className='flex flex-wrap list-none -mb-1'>
-                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center">
-                <img src={javascript} alt="" className="rounded-full w-13 h-13 object-cover"/>
+            <ul className='flex flex-wrap list-none -mb-1'>
+                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center glow ">
+                <img src={javascript} alt="" className="rounded-full w-14 h-14 object-cover bounce-loop "/>
                 <p className="mt-2 text-sm">JavaScript</p>
                 </li>
-                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center">
-                <img src={c_sharp} alt="" className="rounded-full w-13 h-13 object-cover"/>
+                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center glow">
+                <img src={c_sharp} alt="" className="rounded-full w-14 h-14 object-cover bounce-loop"/>
                 <p className="mt-2 text-sm">C#</p>
                 </li>
-                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center">
-                <img src={html_5} alt="" className="rounded-full w-13 h-13 object-cover"/>
+                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center glow">
+                <img src={html_5} alt="" className="rounded-full w-14 h-14 object-cover bounce-loop"/>
                 <p className="mt-2 text-sm">HTML5</p>
                 </li>
-                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center">
-                <img src={css_3} alt="" className="rounded-full w-13 h-13 object-cover"/>
+                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center glow">
+                <img src={css_3} alt="" className="rounded-full w-14 h-14 object-cover bounce-loop"/>
                 <p className="mt-2 text-sm">CSS3</p>
                 </li>
-                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center">
-                <img src={java} alt="" className="rounded-full w-13 h-13 object-cover"/>
+                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center glow">
+                <img src={java} alt="" className="rounded-full w-14 h-14 object-cover bounce-loop"/>
                 <p className="mt-2 text-sm">Java</p>
                 </li>
-                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center">
-                <img src={php} alt="" className="rounded-full w-13 h-13 object-cover"/>
+                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center glow">
+                <img src={php} alt="" className="rounded-full w-14 h-14 object-cover bounce-loop"/>
                 <p className="mt-2 text-sm">PHP</p>
                 </li>
-                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center">
-                <img src={sql} alt="" className="rounded-full w-13 h-13 object-cover"/>
+                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center glow">
+                <img src={sql} alt="" className="rounded-full w-14 h-14 object-cover bounce-loop"/>
                 <p className="mt-2 text-sm">SQL</p>
                 </li>
-                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center">
-                <img src={mySql} alt="" className="rounded-full w-12 h-12 object-cover"/>
+                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center glow">
+                <img src={mySql} alt="" className="rounded-full w-14 h-14 object-cover bounce-loop"/>
                 <p className="mt-2 text-sm">MySQL</p>
                 </li>
-                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center">
-                <img src={nodeJS} alt="" className="rounded-full w-12 h-12 object-cover"/>
+                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center glow">
+                <img src={nodeJS} alt="" className="rounded-full w-14 h-14 object-cover bounce-loop"/>
                 <p className="mt-2 text-sm">Node.js</p>
                 </li>
-                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center">
-                <img src={in_React} alt="" className="rounded-full w-12 h-12 object-cover"/>
+                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center glow">
+                <img src={in_React} alt="" className="rounded-full w-14 h-14 object-cover bounce-loop"/>
                 <p className="mt-2 text-sm">React</p>
                 </li>
-                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center">
-                <img src={python} alt="" className="rounded-full w-12 h-12 object-cover"/>
+                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center glow">
+                <img src={python} alt="" className="rounded-full w-14 h-14 object-cover bounce-loop"/>
                 <p className="mt-2 text-sm">Python</p>
                 </li>
-                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center">
-                <img src={wordPress} alt="" className="rounded-full w-12 h-12 object-cover"/>
+                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center glow">
+                <img src={wordPress} alt="" className="rounded-full w-14 h-14 object-cover bounce-loop"/>
                 <p className="mt-2 text-sm">WordPress</p>
                 </li>
-                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center">
-                <img src={git} alt="" className="rounded-full w-12 h-12 object-cover"/>
+                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center glow">
+                <img src={git} alt="" className="rounded-full w-14 h-14 object-cover bounce-loop"/>
                 <p className="mt-2 text-sm">Git</p>
+                </li>
+                <li className="lg:w-1/4 mb-4 w-1/2 sm:w-1/3 mb-6 flex flex-col items-center text-center glow">
+                <img src={tailwind_css} alt="" className="rounded-full w-14 h-14 object-cover bounce-loop"/>
+                <p className="mt-2 text-sm">Tailwind CSS</p>
                 </li>
 
 
-            </nav>
+            </ul>
                 
             </div>
 

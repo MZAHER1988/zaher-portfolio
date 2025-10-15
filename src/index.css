@@ -6,3 +6,58 @@
 html {
   scroll-behavior: smooth;
 }
+
+
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 0px #ea580c);
+  }
+  50% {
+    filter: drop-shadow(0 0 10px #ea580c);
+  }
+
+}
+
+.glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+
+/* 2) Hoppa/bounce på plats (oändlig loop) */
+@keyframes bounceLoop {
+  0%, 100% { transform: translateY(0); }
+  30%      { transform: translateY(-10px); }
+  60%      { transform: translateY(0); }
+  80%      { transform: translateY(-4px); }
+}
+.bounce-loop {
+  animation: bounceLoop 2s ease-in-out infinite;
+}
+
+
+
+
+
+/* Exempel på användning av gradient-glow-klassen */
+.gradient-glow {
+  background: linear-gradient(45deg, #B9375D,#E7D3D3, #FE5D26, #D25D5D, #EEEEEE, #0046FF,#FE5D26, #5D688A, #BF092F,#FE5D26);
+  color: white;
+  background-size: 400%;
+  animation: gradientAnimation 10s ease-in-out infinite;
+  
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+
+}
+
+/* Tillgänglighet: respektera reducerad rörelse */
+@media (prefers-reduced-motion: reduce) {
+  .glow, .bounce-loop, .gradient-glow {
+    animation: none !important;
+  }
+}
+

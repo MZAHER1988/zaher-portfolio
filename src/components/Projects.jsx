@@ -61,7 +61,7 @@ export default function Projects() {
 
     <section id="projects" className="relative overflow-hidden text-white body-font flex flex-col" data-aos="fade-up" data-aos-delay="400">
         <div className="container px-5 py-24 mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12">My projects</h2>
+            <h2 className="text-4xl font-bold text-center mb-12 text-orange-500">My projects</h2>
             <Slider {...settings}>
                 {listProjects.map((project) => (
                     <div key={project.id} className="p-4">
