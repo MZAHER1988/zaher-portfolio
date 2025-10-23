@@ -10,15 +10,19 @@ import image3 from '../assets/project-3.png'
 import image4 from '../assets/project-1.png'
 import image5 from '../assets/project-2.png'
 
+import { useTranslation } from 'react-i18next';
+
 export default function Projects() {
+
+        const { t } = useTranslation();
 
         const listProjects = [
 
-            {id: 1, image:image1, title:'Project One', description: "Description for project one."},
-            {id: 2, image:image2, title:'Project Two', description: "Description for project two."},
-            {id: 3, image:image3, title:'Project Three', description: "Description for project three."},
-            {id: 4, image:image4, title:'Project Four', description: "Description for project four."},
-            {id: 5, image:image5, title:'Project Five', description: "Description for project five."},
+            {id: 1, image:image1, title:t('projects.projectOne.title'), description: t('projects.projectOne.description')},
+            {id: 2, image:image2, title:t('projects.projectTwo.title'), description: t('projects.projectTwo.description')},
+            {id: 3, image:image3, title:t('projects.projectThree.title'), description: t('projects.projectThree.description')},
+            {id: 4, image:image4, title:t('projects.projectFour.title'), description: t('projects.projectFour.description')},
+            {id: 5, image:image5, title:t('projects.projectFive.title'), description: t('projects.projectFive.description')},
         ];
         const settings = {
             dots: true,
@@ -61,7 +65,7 @@ export default function Projects() {
 
     <section id="projects" className="relative overflow-hidden text-white body-font flex flex-col" data-aos="fade-up" data-aos-delay="400">
         <div className="container px-5 py-24 mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 text-orange-500">My projects</h2>
+            <h2 className="text-4xl font-bold text-center mb-12 text-orange-500">{t('projects.title')}</h2>
             <Slider {...settings}>
                 {listProjects.map((project) => (
                     <div key={project.id} className="p-4">

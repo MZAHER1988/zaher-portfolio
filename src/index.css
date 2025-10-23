@@ -61,3 +61,15 @@ html {
   }
 }
 
+
+
+
+
+@keyframes pulse-slow {
+  0%, 100% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.05) translate(-10px, 10px); }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}

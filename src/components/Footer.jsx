@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-700 rounded-lg shadow mt-12 items-center justify-center space-y-4 md:space-y-0 md:flex md:justify-between md:items-center p-4">
       <div className="w-full max-w-screen-xl mx-auto p-4 md:flex md:items-center md:justify-between">
-        <span className="text-xl font-bold text-gray-200 py-8 text-center items-center justify-center md:py-0">
+        <span className="block text-xl font-bold py-3 text-center items-center justify-center md:py-0">
            <a href="#" className="text-orange-500 hover:underline">M ZAHER HARIRI</a>
         </span>
         <nav className="mt-4 md:mt-0">

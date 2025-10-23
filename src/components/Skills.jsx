@@ -13,29 +13,32 @@ import python from "../assets/python.png"
 import wordPress from "../assets/wordpress.png"
 import git from "../assets/github-100.png"
 import tailwind_css from '../assets/tailwind-css.png'
+import { useTranslation } from 'react-i18next';
+import { Trans } from "react-i18next";
+
 
 
 export default function Skills() {
+  const { t } = useTranslation();
+
   return (
     <section id="skills" className="relative overflow-hidden text-white body-font flex flex-col">
         <div className="container flex flex-wrap px-5 py-24 mx-auto items-center md:flex-row flex-col">
             <div data-aos="fade-up" data-aos-delay="200" 
-                className="md:w-1/2 md:pr-12 md:py-8 md:border-r md:border-b-0 mb-20 md:mb-0 pd-10 border-b 
+                className="md:w-1/2 md:pr-12 md:py-8 md:border-e md:border-b-0 mb-20 md:mb-0 pd-10 border-b 
                 border-orange-400 text-center ">
                 <h1 data-aos="fade-right" data-aos-delay="500" 
-                    className="sm:text-4xl text-2xl font-medium title-font mb-2 text-orange-500">
-                    Skills
+                    className="sm:text-4xl text-2xl font-medium title-font mb-2 text-orange-500 mb-6">
+                    {t("skills.title")}
                 </h1>
                 <p data-aos="fade-right" data-aos-delay="500" className="leading-relaxed text-base">
-                    I have experience working with various programming languages and technologies across both front-end and back-end development. 
-                    I build web applications using <strong>JavaScript</strong>, <strong>C#</strong>, <strong>HTML</strong>, <strong>CSS</strong>, 
-                    <strong>Java</strong>, <strong>PHP</strong>, <strong>Python</strong>, and <strong>SQL/MySQL</strong>, 
-                    and develop dynamic solutions with <strong>Node.js</strong> and <strong>React</strong>. <br></br> <br />
-
-                    I also work with <strong>WordPress</strong> to create content-driven websites, use <strong>Git</strong> for version control, 
-                    and apply <strong>Tailwind CSS</strong> to build modern and responsive interfaces. 
-                    I’m continuously developing my skills through new projects and hands-on learning.
-  
+                    <Trans 
+                        i18nKey="skills.description" 
+                        components={{
+                        i: <i className="title-font font-medium" />,
+                        br: <br />,
+                        }} 
+                    />
                 </p>
             </div>
             <div data-aos="fade-left" data-aos-delay="500" className="flex flex-col md:w-1/2 md:pl-12">

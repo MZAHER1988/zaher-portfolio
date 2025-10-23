@@ -1,15 +1,19 @@
 import React from 'react'
 import { useState } from "react";
 import Swal from 'sweetalert2'
+import { useTranslation } from 'react-i18next';
+
 
 
 export default function Contact() {
+  
 
   const [result, setResult] = useState("");
+  const { t } = useTranslation();
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    setResult("Sending....");
+    setResult("Sending...."); // Optional: Indicate that the form is being sent
 
     try {
     const formData = new FormData(event.target);
@@ -22,34 +26,34 @@ export default function Contact() {
 
     const data = await response.json();
     if (data.success) {
-      setResult("Form Submitted Successfully");
+      setResult(t("alert.successText"));
       event.target.reset();
       await Swal.fire({
-        title: "Success!",
-        text: "Your message has been sent successfully.",
-        footer: "I will get back to you as soon as possible. Thank you!",
+        title: t("alert.successTitle"),
+        text: t("alert.successText"),
+        footer: t("alert.successFooter"),
         icon: "success"
-});
+      });
     } else {
-      setResult("Error");
+      setResult(t("alert.errorText"));
       await Swal.fire({
-        title: "Error!",
-        text: "An error occurred while sending your message.",
-        footer: "Please try again later or use the email link below the form to contact me directly.",
+        title: t("alert.errorTitle"),
+        text: t("alert.errorText"),
+        footer: t("alert.errorFooter"),
         icon: "error"
       });
       
     }
   } catch (error) {
-    setResult("Error");
+    setResult(t("alert.networkText"));
     await Swal.fire({
-      title: "Network Error!",
-      text: "Something went wrong while sending your message. Please check your connection or try again later.",
-      footer: "If the issue persists, please use the email link below the form to contact me directly.",
+      title: t("alert.networkTitle"),
+      text: t("alert.networkText"),
+      footer: t("alert.networkFooter"),
       icon: "error"
     });
-    console.error("Error submitting form:", error);
-  }
+
+    }
   };
 
   return (
@@ -57,11 +61,11 @@ export default function Contact() {
     
     <section id="contact" className="relative py-20 bg-[#0d182e] overflow-hidden" data-aos='fade-up' data-aos-delay='400'>
         <div className="py-8 lg:py-16 mx-auto max-w-screen-md">
-          <h2 className="text-4xl font-extrabold text-center mb-4 tracking-tight text-orange-500">Contact Me</h2>
+          <h2 className="text-4xl font-extrabold text-center mb-4 tracking-tight text-orange-500">{t("contact.title")}</h2>
           <form onSubmit={onSubmit} action='#' className="space-y-8 bg-white/5 backdrop-blur-sm rounded-2xl p-8 shadow-[0_0_30px_rgba(255,165,0,0.15)]">
             <div>
-              <label htmlFor="name" className="block mb-2 text-xl font-medium text-white">Your Name</label>
-              <input type="text" id='name' placeholder="Your Name"  name="name"
+              <label htmlFor="name" className="block mb-2 text-xl font-medium text-white">{t("contact.fields.name.label")}</label>
+              <input type="text" id='name' placeholder={t("contact.fields.name.placeholder")}  name="name"
               className="w-full p-3 rounded-lg bg-white/10 text-white placeholder-gray-300
                          border border-white/20 shadow-[0_0_20px_rgba(255,165,0,0.4)]
                          focus:outline-none focus:ring-2 focus:ring-orange-400 focus:shadow-[0_0_30px_rgba(255,165,0,0.7)]
@@ -70,9 +74,9 @@ export default function Contact() {
                          required/>
             </div>
             <div>
-              <label htmlFor="email" className="block mb-2 text-xl font-medium text-white">Your Email</label>
+              <label htmlFor="email" className="block mb-2 text-xl font-medium text-white">{t("contact.fields.email.label")}</label>
               <input 
-              type="email" id="email" placeholder="youremail@example.com" name="email"
+              type="email" id="email" placeholder={t("contact.fields.email.placeholder")} name="email"
               className="w-full p-3 rounded-lg bg-white/10 text-white placeholder-gray-300
                          border border-white/20 shadow-[0_0_20px_rgba(255,165,0,0.4)]
                          focus:outline-none focus:ring-2 focus:ring-orange-400 focus:shadow-[0_0_30px_rgba(255,165,0,0.7)]
@@ -81,28 +85,29 @@ export default function Contact() {
               required/>
             </div>
             <div className='sm:col-span-2'>
-              <label htmlFor="message" className="block mb-2 text-xl font-medium text-white">Your Message</label>
-              <textarea id="message" rows={6} placeholder="Write your message here..." name="message"
-              className="w-full p-3 rounded-lg bg-white/10 text-white placeholder-gray-300
-                         border border-white/20 shadow-[0_0_20px_rgba(255,165,0,0.4)]
-                         focus:outline-none focus:ring-2 focus:ring-orange-400 focus:shadow-[0_0_30px_rgba(255,165,0,0.7)]
-                         transition-all duration-300"
-              autoComplete='off'
-              required />
+              <label htmlFor="message" className="block mb-2 text-xl font-medium text-white">{t("contact.fields.message.label")}</label>
+              <textarea id="message" rows={6} placeholder={t("contact.fields.message.placeholder")} name="message"
+                className="w-full p-3 rounded-lg bg-white/10 text-white placeholder-gray-300
+                border border-white/20 shadow-[0_0_20px_rgba(255,165,0,0.4)]
+                focus:outline-none focus:ring-2 focus:ring-orange-400 focus:shadow-[0_0_30px_rgba(255,165,0,0.7)]
+                transition-all duration-300"
+                autoComplete='off'
+                required
+              />
             </div>
             <button type="submit" 
-            className="inline-flex items-center justify-center bg-orange-500 text-white py-3 px-8 rounded-full text-lg
-                       font-medium shadow-[0_0_20px_rgba(255,165,0,0.4)]
-                       hover:bg-orange-600 hover:shadow-[0_0_40px_rgba(255,165,0,0.6)]
-                       transition-all duration-300">Send Message</button>
+                    className="inline-flex items-center justify-center bg-orange-500 text-white py-3 px-8 rounded-full text-lg
+                               font-medium shadow-[0_0_20px_rgba(255,165,0,0.4)]
+                               hover:bg-orange-600 hover:shadow-[0_0_40px_rgba(255,165,0,0.6)]
+                               transition-all duration-300">{t("contact.sendButton")}</button>
           </form>
-              {/* Sekundär länk för de som vill öppna sin e-postklient */}
-    <p className="text-center mt-6 text-gray-400">
-      or email me at{" "}
-      <a href="mailto:zaher.fm39@gmail.com?subject=Portfolio%20contact" className="text-orange-400 underline">
-        zaher.fm39@gmail.com
-      </a>
-    </p>
+              {/* Another link for those who prefer to open their email client */}
+          <p className="text-center mt-6 text-gray-400">
+              {t("contact.orEmail")}{" "}
+              <a href="mailto:zaher.fm39@gmail.com?subject=Portfolio%20contact" className="text-orange-400 underline">
+                {t("contact.emailAddress")}
+              </a>
+          </p>
         </div>
 
 </section>
