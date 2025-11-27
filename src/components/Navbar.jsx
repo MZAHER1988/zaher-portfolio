@@ -3,34 +3,33 @@ import { FaBars, FaTimes, FaGlobe } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
-  const { t, i18n } = useTranslation(); // t-funktion för att hämta text från översättningsfiler, i18n för att hantera språk
-  const [isLangOpen, setIsLangOpen] = useState(false); // State för att hantera om språk-dropdown är öppen eller stängd
-  const [isLangOpenMobile, setIsLangOpenMobile] = useState(false); // State för att hantera om språk-dropdown i mobilmenyn är öppen eller stängd
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false); // State för att hantera om mobilmenyn är öppen eller stängd
+  const { t, i18n } = useTranslation(); // t-function to get text from translation files, i18n to handle language
+  const [isLangOpen, setIsLangOpen] = useState(false); // State to handle if language dropdown is open or closed
+  const [isLangOpenMobile, setIsLangOpenMobile] = useState(false); // State to handle if language dropdown in mobile menu is open or closed
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false); // State to handle if mobile menu is open or closed
 
-  // Språk som stöds i dropdown-menyn
+  // Languages supported in the dropdown menu
   const langs = [
     { code: "en", name: "English", dir: "ltr", flag: "🌐 EN" },
     { code: "sv", name: "Svenska", dir: "ltr", flag: "🌐 SE" },
     { code: "ar", name: "العربية", dir: "rtl", flag: "🌐 AR" },
   ];
 
-  // Hämta det aktuella språket från i18n, för att markera valt språk i dropdown
+  // Get the current language from i18n to highlight the selected language in the dropdown
   const current = (i18n.language || "en").split("-")[0];
   const currentLang = langs.find((l) => l.code === current) || langs[1];
 
-  // Funktion för att byta språk
+  // Function to change language
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
-    setIsLangOpen(false);
-    setIsMobileMenuOpen(false);
-    setIsLangOpenMobile(false);
+    setIsLangOpen(false);   // Close desktop language dropdown
+    setIsLangOpenMobile(false); // Close mobile language dropdown
+    setIsMobileMenuOpen(false); // Close mobile menu
+
   };
 
-  {
-    /** Navbar links */
-  }
-  // Här definierar vi länkarna som ska visas i navigeringsfältet
+  {/** Navbar links */}
+  // Define the links to be displayed in the navigation bar
   const listNavbar = [
     { name: "nav.home", href: "#home" },
     { name: "nav.skills", href: "#skills" },
@@ -42,7 +41,7 @@ export default function Navbar() {
   {
     /** Hamburger menu links */
   }
-  // Här definierar vi länkarna som ska visas i hamburgermenyn på mobila enheter
+  // Define the links to be displayed in the hamburger menu on mobile devices
   const listHamburgerMenu = [
     { name: "nav.home", href: "#home" },
     { name: "nav.skills", href: "#skills" },
@@ -57,30 +56,30 @@ export default function Navbar() {
   );
     */
   }
-  // Funktion för att växla mobilmenyns synlighet
+  // Function to toggle the visibility of the mobile menu
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  // Funktion för att hantera klick på länkar i mobilmenyn
+  // Function to handle clicks on links in the mobile menu
   const handleLinkClick = (e, href) => {
     e.preventDefault();
     const target = document.querySelector(href);
 
-    // Scrolla smidigt till målelementet med en offset för att undvika att det hamnar under navbaren
+    // Smoothly scroll to the target element with an offset to avoid it being hidden under the navbar
     if (target) {
       const Offset = -100;
       const elementPosition = target.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY + Offset;
 
-      // Smidig scrollning
+      // Smooth scrolling
       window.scrollTo({
         top: offsetPosition,
         behavior: "smooth",
       });
     }
 
-    // Uppdatera URL utan att ladda om sidan
+    // Update URL without reloading the page
     window.history.replaceState(null, "", href);
     setIsMobileMenuOpen(false);
   };
@@ -95,7 +94,7 @@ export default function Navbar() {
           href="#home"
           className="flex title-font font-medium items-center text-gray-900"
         >
-          <span className="ml-3 text-orange-500 text-xl md:text-2xl lg:text-3xl font-bold">
+          <span className="ml-3 text-orange-600 text-xl md:text-2xl lg:text-3xl font-bold ">
             M ZAHER HARIRI
           </span>
         </a>

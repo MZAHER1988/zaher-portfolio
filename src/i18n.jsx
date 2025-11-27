@@ -45,17 +45,19 @@ i18n
     }
   });
 
-  // Se till att detta ligger efter .init({...}) i i18n.jsx
-
-// Uppdatera automatiskt när språk ändras varsomhelst i appen
+// Update <html> properties after init
 i18n.on('initialized', () => {
-  // Sätt initial html lang/dir utifrån det valda språket när i18n är initierat
+  // Set initial html lang/dir based on the selected language when i18n is initialized
   const initialLang = (i18n.language || 'en').split('-')[0];
   document.documentElement.lang = initialLang;
-  document.documentElement.dir = initialLang === 'ar' ? 'rtl' : 'ltr';
+  document.documentElement.dir = initialLang === 'ar' ? 'rtl' : 'ltr'; // // RTL for Arabic only
 });
 
-// Uppdatera automatiskt när språk ändras varsomhelst i appen
+
+// -------------------------------------------------------------
+// Update <html lang> and <html dir> when language is changed
+// (e.g. when clicking in Navbar)
+// -------------------------------------------------------------
 i18n.on('languageChanged', (lng) => {
   const code = (lng || 'en').split('-')[0];
   localStorage.setItem('i18nextLng', code);

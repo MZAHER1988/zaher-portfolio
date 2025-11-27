@@ -29,7 +29,7 @@
   },
   "contact": {
     "title": "Kontakta mig",
-    "sending": "Skickar...",
+    "description": "Jag ser fram emot att höra från dig! Oavsett om du har en fråga, en projektidé eller bara vill säga hej, tveka inte att kontakta mig via formuläret nedan. Jag kommer att göra mitt bästa för att återkomma till dig så snart som möjligt.",
     "fields": {
       "name": {
         "label": "Ditt namn",
@@ -45,6 +45,7 @@
       }
     },
     "sendButton": "Skicka meddelande",
+    "sending": "Skickar...",
     "orEmail": "eller mejla mig på",
     "emailAddress": "zaher.fm39@gmail.com"
   },

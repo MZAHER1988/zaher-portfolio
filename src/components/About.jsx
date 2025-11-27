@@ -13,16 +13,19 @@ export default function About() {
       data-aos="fade-up"
       data-aos-delay="400"
     >
+      {/* Background Blurs */}
       <div className="absolute top-[100px] left-64 inset-x-0 flex items-start justify-center">
         <div className="h-96 w-96 bg-gradient-to-br from-[#ff910a] blur-2xl invisible opacity-40 rounded-full"></div>
         <div className="h-96 w-96 bg-gradient-to-r from-[#ff910a] blur-2xl opacity-40 rounded-full"></div>
       </div>
+      {/* Content */}
       <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
         <div
           data-aos="fade-right"
           data-aos-delay="400"
           className="relative lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0"
         >
+          {/* Decorative Gradient Box Behind Image */}
           <div className="md:h-[450px] h-[400px] w-[300px] md:right-36 bg-gradient-to-r from-orange-600 via-yellow-500 to-red-400 absolute rounded-md transform rotate-3 -top-8 shadow-[0_0_40px_rgba(255,165,0,0.7)] z-0"></div>
           <img
             src={img_about}
@@ -30,6 +33,7 @@ export default function About() {
             alt={t("about.img_aboutAlt")}
           />
         </div>
+        {/* Text Content */}
         <div
           data-aos="fade-left"
           data-aos-delay="400"

@@ -1,23 +1,17 @@
-import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import image1 from "../assets/FileManager_2.png";
 import image2 from "../assets/ManagerSystem_1.png";
 import image3 from "../assets/quiz-1.png";
 import image4 from "../assets/Movieflix_1.png";
 import image5 from "../assets/Portfolio_1.png";
-import git from "../assets/github-100.png";
-
 import { useTranslation } from "react-i18next";
 
 export default function Projects() {
   const { t } = useTranslation();
 
-  {
-    /* listProjects data */
-  }
+  {/* listProjects data */}
   const listProjects = [
     {
       id: 1,
@@ -114,8 +108,7 @@ export default function Projects() {
         <Slider {...settings}>
           {listProjects.map((project) => (
             <div key={project.id} className="p-4">
-              {/*<div className="bg-[#1c2a48] p-6 rounded-lg shadow-lg hover:shadow-[0_0_40px_rgba(255,165,0,0.5)] transition-shadow duration-300 h-full text-center">*/}
-              <div className="flex flex-col h-full min-h-[550px] border-2 border-orange-400 shadow-[0_0_15px_rgba(255,165,0,0.7)] border-opacity-60 rounded-lg overflow-hidden text-center p-0 hover:shadow-[0_0_40px_rgba(255,165,0,0.5)] transition-shadow duration-500">
+              <div className="flex flex-col h-full min-h-[550px] border-2 border-orange-500 shadow-[0_0_12px_rgba(255,165,0,0.7)] border-opacity-60 rounded-lg overflow-hidden text-center p-0 hover:shadow-[0_0_40px_rgba(255,165,0,0.5)] transition-shadow duration-500">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -130,7 +123,7 @@ export default function Projects() {
                   </p>
                 </div>
 
-                {/* rad med språk/tech (text-badges) */}
+                {/* Code länks and programming languages */}
                 <div className="mt-auto flex flex-wrap justify-center gap-2 mb-4">
                   {project.github && (
                     <a

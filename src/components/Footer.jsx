@@ -1,8 +1,8 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 
 export default function Footer() {
   const { t } = useTranslation();
+  // Same links as in navbar – translated via i18n keys 
   const listNavbar = [
     { name: "nav.home", href: "#home" },
     { name: "nav.skills", href: "#skills" },
@@ -12,11 +12,11 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-gray-700 rounded-lg shadow mt-12 items-center justify-center space-y-4 md:space-y-0 md:flex md:justify-between md:items-center p-4">
-      <div className="w-full max-w-screen-xl mx-auto p-4 md:flex md:items-center md:justify-between">
+    <footer className="bg-gray-700 rounded-lg shadow mt-12 items-center justify-center space-y-4 md:space-y-0 md:flex md:justify-between md:items-center">
+      <div className="w-full max-w-screen-xl mx-auto px-4 py-6 md:flex md:items-center md:justify-between">
         <span className="block text-xl font-bold py-3 text-center items-center justify-center md:py-0">
           <a
-            href="#"
+            href="#home"
             className="text-orange-600 text-xl md:text-2xl lg:text-3xl font-bold hover:underline"
           >
             M ZAHER HARIRI
@@ -36,7 +36,6 @@ export default function Footer() {
             ))}
           </ul>
         </nav>
-
         <div className="py-8 text-center items-center justify-center md:py-0">
           <p dir="auto" className="text-gray-200 items-center justify-center">
             {t("footer.rightsReserved")}

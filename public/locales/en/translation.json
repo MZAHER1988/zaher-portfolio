@@ -29,7 +29,7 @@
   },
   "contact": {
     "title": "Contact Me",
-    "sending": "Sending...",
+    "description": "I'm excited to hear from you! Whether you have a question, a project idea, or just want to say hello, feel free to reach out using the form below. I'll do my best to get back to you as soon as possible.",
     "fields": {
       "name": {
         "label": "Your Name",
@@ -45,6 +45,7 @@
       }
     },
     "sendButton": "Send Message",
+    "sending": "Sending...",
     "orEmail": "or email me at",
     "emailAddress": "zaher.fm39@gmail.com"
   },

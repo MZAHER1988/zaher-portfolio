@@ -1,4 +1,3 @@
-import React from "react";
 import javascript from "../assets/js_5968292.png";
 import c_sharp from "../assets/c-sharp_6132221.png";
 import html_5 from "../assets/html-5.png";
@@ -31,6 +30,7 @@ export default function Skills() {
       >
         {t("skills.title")}
       </h1>
+      {/** Skills description*/}
       <div className="container flex flex-wrap px-5 py-24 mx-auto items-center md:flex-row flex-col">
         <div
           data-aos="fade-up"
@@ -52,6 +52,7 @@ export default function Skills() {
             />
           </p>
         </div>
+        {/** Language pic */}
         <div
           data-aos="fade-left"
           data-aos-delay="500"
