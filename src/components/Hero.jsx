@@ -18,7 +18,7 @@ export default function Hero() {
         data-aos-delay="250"
         className="text-white body-font z-10 relative py-20"
       >
-        <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center mt-26">
+        <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center md:mt-10">
           {/** Text section*/}
           <div
             className="lg:flex-grow md:w-1/2 lg:pr-24 flex flex-col md:items-start 

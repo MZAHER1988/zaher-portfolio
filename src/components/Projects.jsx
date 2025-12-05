@@ -110,11 +110,11 @@ export default function Projects() {
         <Slider {...settings}>
           {listProjects.map((project) => (
             <div key={project.id} className="p-6 md:w-full">
-              <div className="flex flex-col h-full w-full min-h-[500px] border-2 border-orange-500 shadow-[0_0_12px_rgba(255,165,0,0.7)] border-opacity-60 rounded-lg overflow-hidden text-center p-0 hover:shadow-[0_0_40px_rgba(255,165,0,0.5)] transition-shadow duration-500">
+              <div className="flex flex-col h-full w-full min-h-[550px] border-2 border-orange-500 shadow-[0_0_12px_rgba(255,165,0,0.7)] border-opacity-60 rounded-lg overflow-hidden text-center p-0 hover:shadow-[0_0_40px_rgba(255,165,0,0.5)] transition-shadow duration-500">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full lg:h-48 md:h-36 sm:h-24 object-cover object-center"
+                  className="w-full h-40 sm:h-48 md:h-52 lg:h-56 object-cover object-center"
                 />
                 <div className="p-6">
                   <h3 className="tracking-widest text-xl title-font font-medium text-yellow-400 mb-1">
