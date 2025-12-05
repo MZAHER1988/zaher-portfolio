@@ -11,7 +11,9 @@ import { useTranslation } from "react-i18next";
 export default function Projects() {
   const { t } = useTranslation();
 
-  {/* listProjects data */}
+  {
+    /* listProjects data */
+  }
   const listProjects = [
     {
       id: 1,

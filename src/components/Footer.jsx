@@ -17,7 +17,7 @@ export default function Footer() {
         <span className="block text-xl font-bold py-3 text-center items-center justify-center md:py-0">
           <a
             href="#home"
-            className="text-orange-600 text-xl md:text-2xl lg:text-3xl font-bold hover:underline"
+            className="text-orange-600 text-xl md:text-2xl lg:text-3xl font-bold"
           >
             M ZAHER HARIRI
           </a>

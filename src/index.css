@@ -1,11 +1,10 @@
 @import "tailwindcss";
 
-
-
 html {
   scroll-behavior: smooth;
 }
 
+/* Glowing effect */
 @keyframes glow {
   0%, 100% {
     filter: drop-shadow(0 0 0px #ea580c);
@@ -19,38 +18,32 @@ html {
   animation: glow 3s ease-in-out infinite;
 }
 
-/* 2) Hoppa/bounce på plats (oändlig loop) */
+/* Jump / bounce on the spot (infinite loop) */
 @keyframes bounceLoop {
   0%, 100% { transform: translateY(0); }
   30%      { transform: translateY(-10px); }
   60%      { transform: translateY(0); }
   80%      { transform: translateY(-4px); }
 }
+
 .bounce-loop {
   animation: bounceLoop 2s ease-in-out infinite;
 }
 
-/* Exempel på användning av gradient-glow-klassen */
-.gradient-glow {
-  background: linear-gradient(45deg, red, pink, skyblue, #B9375D,#E7D3D3, #FE5D26, #BF092F);
-  color: white;
-  background-size: 400%;
-  animation: gradientAnimation 10s ease-in-out infinite; 
-}
-
+/* Gradient glow effect */
 @keyframes gradientAnimation {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Tillgänglighet: respektera reducerad rörelse */
-@media (prefers-reduced-motion: reduce) {
-  .glow, .bounce-loop, .gradient-glow {
-    animation: none !important;
-  }
+.gradient-glow {
+  background: linear-gradient(45deg,#FE5D26, #ff910a,red, pink, skyblue, #B9375D, #FE5D26, #ff910a, #ff005e, #00c2ff);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease-in-out infinite; 
 }
 
+/* Slow pulsing effect */
 @keyframes pulse-slow {
   0%, 100% { transform: scale(1) translate(0, 0); }
   50% { transform: scale(1.05) translate(-10px, 10px); }
@@ -60,23 +53,9 @@ html {
   animation: pulse-slow 8s ease-in-out infinite;
 }
 
-
-
-
-
-@keyframes geminiGradient {
-  0% {
-    background-position: 0% 50%;
+/* Accessibility: respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .glow, .bounce-loop, .gradient-glow, .animate-pulse-slow {
+    animation: none !important;
   }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.animate-gemini-border {
-  background-size: 300% 300%;
-  animation: geminiGradient 4s linear infinite;
 }

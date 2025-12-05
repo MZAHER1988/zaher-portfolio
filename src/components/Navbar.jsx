@@ -22,13 +22,14 @@ export default function Navbar() {
   // Function to change language
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
-    setIsLangOpen(false);   // Close desktop language dropdown
+    setIsLangOpen(false); // Close desktop language dropdown
     setIsLangOpenMobile(false); // Close mobile language dropdown
     setIsMobileMenuOpen(false); // Close mobile menu
-
   };
 
-  {/** Navbar links */}
+  {
+    /** Navbar links */
+  }
   // Define the links to be displayed in the navigation bar
   const listNavbar = [
     { name: "nav.home", href: "#home" },
@@ -39,23 +40,12 @@ export default function Navbar() {
   ];
 
   {
-    /** Hamburger menu links */
+    /** Hamburger menu links, excluding "Contact" */
   }
-  // Define the links to be displayed in the hamburger menu on mobile devices
-  const listHamburgerMenu = [
-    { name: "nav.home", href: "#home" },
-    { name: "nav.skills", href: "#skills" },
-    { name: "nav.about", href: "#about" },
-    { name: "nav.projects", href: "#projects" },
-  ];
-
-  {
-    /**
-    const listHamburgerMenu = listNavbar.filter(
+  const listHamburgerMenu = listNavbar.filter(
     (item) => item.name !== "nav.contact"
   );
-    */
-  }
+
   // Function to toggle the visibility of the mobile menu
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);

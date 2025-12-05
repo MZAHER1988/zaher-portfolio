@@ -1,11 +1,10 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-
-import Backend from 'i18next-http-backend';
-import LanguageDetector from 'i18next-browser-languagedetector';
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import Backend from "i18next-http-backend";
+import LanguageDetector from "i18next-browser-languagedetector";
 
 // don't want to use this?
-// have a look at the Quick start guide 
+// have a look at the Quick start guide
 // for passing in lng and translations on init
 
 i18n
@@ -21,48 +20,46 @@ i18n
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
-    fallbackLng: 'en',
-    supportedLngs: ['en', 'sv', 'ar'],
-    load : 'languageOnly',
-    debug: process.env.NODE_ENV === 'development',
-    ns: ['translation'],
-    defaultNS: 'translation',
+    fallbackLng: "en",
+    supportedLngs: ["en", "sv", "ar"],
+    load: "languageOnly",
+    debug: process.env.NODE_ENV === "development",
+    ns: ["translation"],
+    defaultNS: "translation",
     backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json',
+      loadPath: "/locales/{{lng}}/{{ns}}.json",
     },
     detection: {
       // order and from where user language should be detected
-      order: ['localStorage', 'navigator', 'htmlTag'],
+      order: ["localStorage", "navigator", "htmlTag"],
 
       // keys or params to lookup language from
-      caches: ['localStorage'],
-      lookupLocalStorage: 'i18nextLng',
-
+      caches: ["localStorage"],
+      lookupLocalStorage: "i18nextLng",
     },
 
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
-    }
+    },
   });
 
 // Update <html> properties after init
-i18n.on('initialized', () => {
+i18n.on("initialized", () => {
   // Set initial html lang/dir based on the selected language when i18n is initialized
-  const initialLang = (i18n.language || 'en').split('-')[0];
+  const initialLang = (i18n.language || "en").split("-")[0];
   document.documentElement.lang = initialLang;
-  document.documentElement.dir = initialLang === 'ar' ? 'rtl' : 'ltr'; // // RTL for Arabic only
+  document.documentElement.dir = initialLang === "ar" ? "rtl" : "ltr"; // RTL for Arabic only
 });
-
 
 // -------------------------------------------------------------
 // Update <html lang> and <html dir> when language is changed
 // (e.g. when clicking in Navbar)
 // -------------------------------------------------------------
-i18n.on('languageChanged', (lng) => {
-  const code = (lng || 'en').split('-')[0];
-  localStorage.setItem('i18nextLng', code);
+i18n.on("languageChanged", (lng) => {
+  const code = (lng || "en").split("-")[0];
+  localStorage.setItem("i18nextLng", code);
   document.documentElement.lang = code;
-  document.documentElement.dir = code === 'ar' ? 'rtl' : 'ltr';
+  document.documentElement.dir = code === "ar" ? "rtl" : "ltr";
 });
 
 export default i18n;

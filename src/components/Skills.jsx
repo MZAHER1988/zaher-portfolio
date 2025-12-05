@@ -63,6 +63,7 @@ export default function Skills() {
               <img
                 src={javascript}
                 alt=""
+                aria-hidden="true"
                 className="rounded-full w-14 h-14 object-cover bounce-loop "
               />
               <p className="mt-2 text-sm">JavaScript</p>
@@ -71,6 +72,7 @@ export default function Skills() {
               <img
                 src={c_sharp}
                 alt=""
+                aria-hidden="true"
                 className="rounded-full w-14 h-14 object-cover bounce-loop"
               />
               <p className="mt-2 text-sm">C#</p>
@@ -79,6 +81,7 @@ export default function Skills() {
               <img
                 src={html_5}
                 alt=""
+                aria-hidden="true"
                 className="rounded-full w-14 h-14 object-cover bounce-loop"
               />
               <p className="mt-2 text-sm">HTML5</p>
@@ -87,6 +90,7 @@ export default function Skills() {
               <img
                 src={css_3}
                 alt=""
+                aria-hidden="true"
                 className="rounded-full w-14 h-14 object-cover bounce-loop"
               />
               <p className="mt-2 text-sm">CSS3</p>
@@ -95,6 +99,7 @@ export default function Skills() {
               <img
                 src={java}
                 alt=""
+                aria-hidden="true"
                 className="rounded-full w-14 h-14 object-cover bounce-loop"
               />
               <p className="mt-2 text-sm">Java</p>
@@ -103,6 +108,7 @@ export default function Skills() {
               <img
                 src={php}
                 alt=""
+                aria-hidden="true"
                 className="rounded-full w-14 h-14 object-cover bounce-loop"
               />
               <p className="mt-2 text-sm">PHP</p>
@@ -111,6 +117,7 @@ export default function Skills() {
               <img
                 src={sql}
                 alt=""
+                aria-hidden="true"
                 className="rounded-full w-14 h-14 object-cover bounce-loop"
               />
               <p className="mt-2 text-sm">SQL</p>
@@ -119,6 +126,7 @@ export default function Skills() {
               <img
                 src={mySql}
                 alt=""
+                aria-hidden="true"
                 className="rounded-full w-14 h-14 object-cover bounce-loop"
               />
               <p className="mt-2 text-sm">MySQL</p>
@@ -127,6 +135,7 @@ export default function Skills() {
               <img
                 src={nodeJS}
                 alt=""
+                aria-hidden="true"
                 className="rounded-full w-14 h-14 object-cover bounce-loop"
               />
               <p className="mt-2 text-sm">Node.js</p>
@@ -135,6 +144,7 @@ export default function Skills() {
               <img
                 src={in_React}
                 alt=""
+                aria-hidden="true"
                 className="rounded-full w-14 h-14 object-cover bounce-loop"
               />
               <p className="mt-2 text-sm">React</p>
@@ -143,6 +153,7 @@ export default function Skills() {
               <img
                 src={python}
                 alt=""
+                aria-hidden="true"
                 className="rounded-full w-14 h-14 object-cover bounce-loop"
               />
               <p className="mt-2 text-sm">Python</p>
@@ -151,6 +162,7 @@ export default function Skills() {
               <img
                 src={wordPress}
                 alt=""
+                aria-hidden="true"
                 className="rounded-full w-14 h-14 object-cover bounce-loop"
               />
               <p className="mt-2 text-sm">WordPress</p>
@@ -159,6 +171,7 @@ export default function Skills() {
               <img
                 src={git}
                 alt=""
+                aria-hidden="true"
                 className="rounded-full w-14 h-14 object-cover bounce-loop"
               />
               <p className="mt-2 text-sm">Git</p>
@@ -167,6 +180,7 @@ export default function Skills() {
               <img
                 src={tailwind_css}
                 alt=""
+                aria-hidden="true"
                 className="rounded-full w-14 h-14 object-cover bounce-loop"
               />
               <p className="mt-2 text-sm">Tailwind CSS</p>

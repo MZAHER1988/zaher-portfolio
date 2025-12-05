@@ -44,39 +44,50 @@ export default function Hero() {
 
             {/** Buttons and social media links */}
             <div className="flex flex-col flex-wrap items-start gap-4 md:ml-8">
-              <a href={cv} download>
+              <a
+                href={cv}
+                download
+                className="inline-flex"
+                aria-label={`${t("hero.downloadCv")} - PDF`}
+              >
                 <button
-                  className="gradient-glow inline-flex text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none 
-                hover:bg-orange-600 hover:shadow-[0_0_40px_rgba(255,165,0,0.5)] rounded-full text-lg mr-4"
+                  className="gradient-glow inline-flex text-white bg-orange-500 border-0 py-2 px-6 
+                             hover:bg-orange-600 hover:shadow-[0_0_40px_rgba(255,165,0,0.5)]
+                             rounded-full text-lg mr-4"
                 >
                   {t("hero.downloadCv")}
                 </button>
               </a>
 
               <div className="flex justify-around items-center mt-4 gap-4 glow">
-                <img
-                  src={linkedin}
-                  alt={t("hero.linkedinAlt")}
-                  className="cursor-pointer h-14 w-14 mr-6"
-                  onClick={() =>
-                    window.open(
-                      "https://www.linkedin.com/in/zaher-hariri-781686210/",
-                      "_blank"
-                    )
-                  }
-                />
-
-                <img
-                  src={git}
-                  alt={t("hero.githubAlt")}
-                  className="cursor-pointer h-16 w-16"
-                  onClick={() =>
-                    window.open(
-                      "https://github.com/MZAHER1988/myPortfolio-in-react",
-                      "_blank"
-                    )
-                  }
-                />
+                <a
+                  href="https://www.linkedin.com/in/zaher-hariri-781686210/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={t("hero.linkedinAlt")}
+                  className="inline-flex items-center justify-center h-14 w-14 mr-6 rounded-full"
+                >
+                  <img
+                    src={linkedin}
+                    alt=""
+                    className="h-14 w-14"
+                    aria-hidden="true"
+                  />
+                </a>
+                <a
+                  href="https://github.com/MZAHER1988"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={t("hero.githubAlt")}
+                  className="inline-flex items-center justify-center h-16 w-16 rounded-full"
+                >
+                  <img
+                    src={git}
+                    alt=""
+                    className="h-16 w-16"
+                    aria-hidden="true"
+                  />
+                </a>
               </div>
             </div>
           </div>
