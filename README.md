@@ -1,16 +1,61 @@
-# React + Vite
+# My Portfolio — React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal portfolio website built with React and Tailwind CSS.  
+It showcases my skills, projects and education, and includes a contact form so people can reach me.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- Responsive layout (works on mobile, tablet and desktop)
+- Multi-language support: English, Swedish and Arabic
+- Animated sections using AOS
+- Projects section with images and short descriptions
+- Contact form powered by Web3Forms + SweetAlert2 for feedback
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Framework: React (JSX)
+- Tailwind CSS: for styling
+- i18next: for translations  
+- React Slick: for the project slider  
+- SweetAlert2: for alert dialogs  
+- AOS: for animation on scroll
+
+---
+
+## Project Structure (short overview)
+
+src/
+ - App.jsx _ main layout
+ - main.jsx _ React + i18n entry
+ - i18n.jsx _ i18next configuration
+ - components/ _ Navbar, Hero, Skills, About, Projects, Contact, Footer
+ - assets/ _ images and icons
+
+public/
+- locales/{en,sv,ar}/translation.json — i18n translation resources
+
+---
+
+## Getting started
+
+ ### Clone the repo
+git clone https://github.com/MZAHER1988/myPortfolio-in-react.git
+cd myPortfolio-in-react
+
+### Install dependencies
+npm install
+
+### Start the dev server (Vite):
+npm run dev
+
+Then open http://localhost:5173 in your browser to preview.
+
+---
+
+## License and Credits
+
+This repository contains images and content created by the project owner.
