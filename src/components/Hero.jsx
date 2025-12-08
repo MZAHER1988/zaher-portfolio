@@ -1,5 +1,5 @@
 import hi_pic from "../assets/hi.png";
-import cv from "../assets/MZH_CV_WEBBUTVECKLARE_1.pdf";
+import cv from "../assets/CV_WEBBUTVECKLING.pdf";
 import img from "../assets/hero_bild_bg.png";
 import git from "../assets/github-100.png";
 import linkedin from "../assets/linkedin.png";
