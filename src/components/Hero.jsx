@@ -46,7 +46,9 @@ export default function Hero() {
             <div className="flex flex-col flex-wrap items-start gap-4 md:ml-8">
               <a
                 href={cv}
-                download
+                download = "Zaher Hariri CV.pdf"
+                target = "_blank"
+                rel = "noopener noreferrer"
                 className="inline-flex"
                 aria-label={`${t("hero.downloadCv")} - PDF`}
               >
