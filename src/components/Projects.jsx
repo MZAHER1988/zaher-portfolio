@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import image1 from "../assets/FileManager_2.png";
+import image1 from "../assets/FileManager_animation.gif";
 import image2 from "../assets/ManagerSystem_1.png";
 import image3 from "../assets/quiz-1.png";
 import image4 from "../assets/Movieflix_1.png";
@@ -36,9 +36,9 @@ export default function Projects() {
     return () => window.removeEventListener("resize", updateSlidesToShow);
   }, []);
 
-  {
-    /* Slider settings  */
-  }
+  
+    //Slider settings
+  
   const settings = {
     dots: true,
     infinite: true,
@@ -59,8 +59,8 @@ export default function Projects() {
       image: image1,
       title: t("projects.projectOne.title"),
       description: t("projects.projectOne.description"),
-      tech: ["C#", "Windows Forms"],
-      github: null,
+      tech: ["C#", ".NET", "Windows Forms"],
+      github: "https://github.com/MZAHER1988/FileManager",
     },
     {
       id: 2,
@@ -115,6 +115,7 @@ export default function Projects() {
                   src={project.image}
                   alt={project.title}
                   className="w-full h-40 sm:h-48 md:h-52 lg:h-56 object-cover object-center"
+                  loading="lazy"
                 />
                 <div className="p-6">
                   <h3 className="tracking-widest text-xl title-font font-medium text-yellow-400 mb-1">

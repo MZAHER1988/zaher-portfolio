@@ -64,7 +64,7 @@
         "title": "My Projects",
         "projectOne": {
         "title": "File Manager",
-        "description": "A C# desktop app that allows users to manage files and folders with basic operations like create, rename, and delete."
+        "description": "A desktop file management application built with C# and Windows Forms. It supports browsing folders, creating, renaming, deleting, copying, cutting and pasting files and folders."
         },
         "projectTwo": {
         "title": "Manager System",

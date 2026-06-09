@@ -64,7 +64,7 @@
     "title": "Mina projekt",
     "projectOne": {
       "title": "File Manager",
-      "description": "Ett C#-desktopprogram som låter användaren hantera filer och mappar med grundläggande funktioner som skapa, byta namn och ta bort."
+      "description": "En skrivbordsapplikation för filhantering utvecklad med C# och Windows Forms. Applikationen gör det möjligt för användare att bläddra mellan mappar, skapa, byta namn på, ta bort, kopiera, klippa ut och klistra in filer och mappar via ett grafiskt användargränssnitt."
     },
     "projectTwo": {
       "title": "Manager System",
