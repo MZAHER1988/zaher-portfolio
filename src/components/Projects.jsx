@@ -6,6 +6,7 @@ import image2 from "../assets/ManagerSystem_1.png";
 import image3 from "../assets/quiz-1.png";
 import image4 from "../assets/Movieflix_1.png";
 import image5 from "../assets/Portfolio_1.png";
+import image6 from "../assets/CineVerse.png";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 
@@ -61,6 +62,7 @@ export default function Projects() {
       description: t("projects.projectOne.description"),
       tech: ["C#", ".NET", "Windows Forms"],
       github: "https://github.com/MZAHER1988/FileManager",
+      liveDemo: null,
     },
     {
       id: 2,
@@ -69,6 +71,7 @@ export default function Projects() {
       description: t("projects.projectTwo.description"),
       tech: ["C#", "Windows Forms", "API"],
       github: null,
+      liveDemo: null,
     },
     {
       id: 3,
@@ -77,6 +80,7 @@ export default function Projects() {
       description: t("projects.projectThree.description"),
       tech: ["C#", "ASP.NET MVC", "HTML", "CSS", "SQL Server"],
       github: null,
+      liveDemo: null,
     },
     {
       id: 4,
@@ -85,6 +89,7 @@ export default function Projects() {
       description: t("projects.projectFour.description"),
       tech: ["HTML", "CSS", "JavaScript", "API"],
       github: null,
+      liveDemo: null,
     },
     {
       id: 5,
@@ -93,6 +98,16 @@ export default function Projects() {
       description: t("projects.projectFive.description"),
       tech: ["React", "i18next", "Tailwind CSS"],
       github: "https://github.com/MZAHER1988/zaher-portfolio",
+      liveDemo: null,
+    },
+    {
+      id: 6,
+      image: image6,
+      title: t("projects.projectSix.title"),
+      description: t("projects.projectSix.description"),
+      tech: ["React", "JavaScript", "TailwindCSS", "Vite", "TMDB API"],
+      github: "https://github.com/MZAHER1988/CineVerse",
+      liveDemo: "https://cineverse-movie.pages.dev/",
     },
   ];
 
@@ -110,7 +125,9 @@ export default function Projects() {
         <Slider {...settings}>
           {listProjects.map((project) => (
             <div key={project.id} className="p-6 md:w-full">
-              <div className="flex flex-col h-full w-full min-h-[550px] border-2 border-orange-500 shadow-[0_0_12px_rgba(255,165,0,0.7)] border-opacity-60 rounded-lg overflow-hidden text-center p-0 hover:shadow-[0_0_40px_rgba(255,165,0,0.5)] transition-shadow duration-500">
+              <div className="flex flex-col h-full w-full min-h-[550px] border-2 border-orange-500 
+              shadow-[0_0_12px_rgba(255,165,0,0.7)] border-opacity-60 rounded-lg overflow-hidden text-center 
+              p-0 hover:shadow-[0_0_40px_rgba(255,165,0,0.5)] transition-shadow duration-500">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -127,7 +144,7 @@ export default function Projects() {
                 </div>
 
                 {/* Code länks and programming languages */}
-                <div className="mt-auto flex flex-wrap justify-center gap-2 mb-4">
+                <div className="mt-auto flex justify-around gap-1 mb-4">
                   {project.github && (
                     <a
                       href={project.github}
@@ -138,6 +155,18 @@ export default function Projects() {
                       🔗 Code
                     </a>
                   )}
+                  {project.liveDemo && (
+                    <a
+                      href={project.liveDemo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full mb-3 inline-block text-orange-400 hover:text-yellow-400 font-semibold"
+                    >
+                      🌐 Live Demo
+                    </a>
+                  )}
+                  </div>
+                <div className="flex flex-wrap justify-center gap-1 mb-4">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}

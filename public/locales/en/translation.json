@@ -81,6 +81,10 @@
         "projectFive": {
         "title": "Portfolio Website",
         "description": "A personal portfolio website built with React and Tailwind CSS to showcase my skills, projects and contact information in a clean and responsive layout."
+        },
+        "projectSix": {
+        "title": "CineVerse",
+        "description": "A modern movie discovery app built with React and Tailwind CSS, powered by the TMDB API. Users can browse popular movies, trending movies, upcoming movies, browse by genre, search for specific titles, and view detailed information about each film."
         }
     },
   "footer": {
