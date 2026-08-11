@@ -81,6 +81,10 @@
     "projectFive": {
       "title": "Portfolio Website",
       "description": "En personlig portfolio byggd med React och Tailwind CSS för att visa mina kunskaper, projekt och kontaktinformation i en ren och responsiv design."
+    },
+    "projectSix": {
+      "title": "CineVerse",
+      "description": "En modern filmupptäcktsapp byggd med React och Tailwind CSS, som drivs av TMDB API. Användare kan bläddra bland populära filmer, trendande filmer, kommande filmer, bläddra efter genre, söka efter specifika titlar och visa detaljerad information om varje film."
     }
   },
   "footer": {
