@@ -71,8 +71,8 @@
         "description": "A C# inventory and sales system where users can add, update, or remove products, manage a shopping cart, and complete purchases. Stock levels update automatically through an API, and the POS handles checkout operations."
         },
         "projectThree": {
-        "title": "Quiz Website",
-        "description": "A web-based quiz application built with ASP.NET MVC (C#), HTML, CSS and SQL Server. It uses a database to store questions and results, and I am continuing to develop it by adding new features and improving the user experience."
+        "title": "Quizora – Full-Stack Quiz Application",
+        "description": "A dynamic, web-based quiz platform built with ASP.NET Core MVC. Users can test their knowledge through structured multi-choice questions, navigate through an interactive game flow, and view real-time results."
         },
         "projectFour": {
         "title": "Movie website",
