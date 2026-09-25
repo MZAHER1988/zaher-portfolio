@@ -71,8 +71,8 @@
       "description": "Ett C#-system för lager och försäljning där användaren kan lägga till, uppdatera eller ta bort produkter, hantera en kundvagn och genomföra köp. Lagersaldot uppdateras automatiskt via ett API och POS-systemet sköter betalningsmomentet."
     },
     "projectThree": {
-      "title": "Quiz Website",
-      "description": "En webbaserad quiz-sida byggd med ASP.NET MVC (C#), HTML, CSS och SQL Server. Frågor och resultat lagras i en databas, och jag vidareutvecklar sidan med fler funktioner och bättre användarupplevelse."
+      "title": "Quizora – Full-Stack Quiz Application",
+      "description": "En dynamisk webbaserad quizplattform byggd med ASP.NET Core MVC. Användare kan testa sina kunskaper genom strukturerade flervalsfrågor, navigera genom ett interaktivt spelupplägg och se resultat i realtid."
     },
     "projectFour": {
       "title": "Movie website",

@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import image1 from "../assets/FileManager_animation.gif";
 import image2 from "../assets/ManagerSystem_1.png";
-import image3 from "../assets/quiz-1.png";
+import image3 from "../assets/Quiz.png";
 import image4 from "../assets/Movieflix_1.png";
 import image5 from "../assets/Portfolio_1.png";
 import image6 from "../assets/CineVerse.png";
@@ -78,9 +78,9 @@ export default function Projects() {
       image: image3,
       title: t("projects.projectThree.title"),
       description: t("projects.projectThree.description"),
-      tech: ["C#", "ASP.NET MVC", "HTML", "CSS", "SQL Server"],
-      github: null,
-      liveDemo: null,
+      tech: ["C#", ".NET9", "ASP.NET Core MVC", "Entity Framework Core", "SQL Server", "HTML", "CSS"],
+      github: "https://github.com/MZAHER1988/quiz-app-fullstack",
+      liveDemo: "https://quizora.runasp.net/",
     },
     {
       id: 4,
