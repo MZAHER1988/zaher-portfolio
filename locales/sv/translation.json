@@ -64,27 +64,39 @@
     "title": "Mina projekt",
     "projectOne": {
       "title": "File Manager",
-      "description": "En skrivbordsapplikation för filhantering utvecklad med C# och Windows Forms. Applikationen gör det möjligt för användare att bläddra mellan mappar, skapa, byta namn på, ta bort, kopiera, klippa ut och klistra in filer och mappar via ett grafiskt användargränssnitt."
+      "description": "En skrivbordsapplikation för filhantering utvecklad med C# och Windows Forms. Applikationen gör det möjligt för användare att bläddra mellan mappar, skapa, byta namn på, ta bort, kopiera, klippa ut och klistra in filer och mappar via ett grafiskt användargränssnitt.",
+      "showmore": "Läs mer",
+      "showless": "Läs mindre"
     },
     "projectTwo": {
       "title": "Manager System",
-      "description": "Ett C#-system för lager och försäljning där användaren kan lägga till, uppdatera eller ta bort produkter, hantera en kundvagn och genomföra köp. Lagersaldot uppdateras automatiskt via ett API och POS-systemet sköter betalningsmomentet."
+      "description": "Ett C#-system för lager och försäljning där användaren kan lägga till, uppdatera eller ta bort produkter, hantera en kundvagn och genomföra köp. Lagersaldot uppdateras automatiskt via ett API och POS-systemet sköter betalningsmomentet.",
+      "showmore": "Läs mer",
+      "showless": "Läs mindre"
     },
     "projectThree": {
       "title": "Quizora – Full-Stack Quiz Application",
-      "description": "En dynamisk webbaserad quizplattform byggd med ASP.NET Core MVC. Användare kan testa sina kunskaper genom strukturerade flervalsfrågor, navigera genom ett interaktivt spelupplägg och se resultat i realtid."
+      "description": "En dynamisk webbaserad quizplattform byggd med ASP.NET Core MVC. Användare kan testa sina kunskaper genom strukturerade flervalsfrågor, navigera genom ett interaktivt spelupplägg och se resultat i realtid.",
+      "showmore": "Läs mer",
+      "showless": "Läs mindre"
     },
     "projectFour": {
       "title": "Movie website",
-      "description": "En filmsida skapad med HTML, CSS och JavaScript som använder ett API för att söka, bläddra och visa detaljer om filmer. Webbplatsen är responsiv och användarvänlig."
+      "description": "En filmsida skapad med HTML, CSS och JavaScript som använder ett API för att söka, bläddra och visa detaljer om filmer. Webbplatsen är responsiv och användarvänlig.",
+      "showmore": "Läs mer",
+      "showless": "Läs mindre"
     },
     "projectFive": {
       "title": "Portfolio Website",
-      "description": "En personlig portfolio byggd med React och Tailwind CSS för att visa mina kunskaper, projekt och kontaktinformation i en ren och responsiv design."
+      "description": "En personlig portfolio byggd med React och Tailwind CSS för att visa mina kunskaper, projekt och kontaktinformation i en ren och responsiv design.",
+      "showmore": "Läs mer",
+      "showless": "Läs mindre"
     },
     "projectSix": {
       "title": "CineVerse",
-      "description": "En modern filmupptäcktsapp byggd med React och Tailwind CSS, som drivs av TMDB API. Användare kan bläddra bland populära filmer, trendande filmer, kommande filmer, bläddra efter genre, söka efter specifika titlar och visa detaljerad information om varje film."
+      "description": "En modern filmupptäcktsapp byggd med React och Tailwind CSS, som drivs av TMDB API. Användare kan bläddra bland populära filmer, trendande filmer, kommande filmer, bläddra efter genre, söka efter specifika titlar och visa detaljerad information om varje film.",
+      "showmore": "Läs mer",
+      "showless": "Läs mindre"
     }
   },
   "footer": {
