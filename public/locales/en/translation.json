@@ -64,27 +64,39 @@
         "title": "My Projects",
         "projectOne": {
         "title": "File Manager",
-        "description": "A desktop file management application built with C# and Windows Forms. It supports browsing folders, creating, renaming, deleting, copying, cutting and pasting files and folders."
+        "description": "A desktop file management application built with C# and Windows Forms. It supports browsing folders, creating, renaming, deleting, copying, cutting and pasting files and folders.",
+        "showmore": "Read More",
+        "showless": "Read Less"
         },
         "projectTwo": {
         "title": "Manager System",
-        "description": "A C# inventory and sales system where users can add, update, or remove products, manage a shopping cart, and complete purchases. Stock levels update automatically through an API, and the POS handles checkout operations."
+        "description": "A C# inventory and sales system where users can add, update, or remove products, manage a shopping cart, and complete purchases. Stock levels update automatically through an API, and the POS handles checkout operations.",
+        "showmore": "Read More",
+        "showless": "Read Less"
         },
         "projectThree": {
         "title": "Quizora – Full-Stack Quiz Application",
-        "description": "A dynamic, web-based quiz platform built with ASP.NET Core MVC. Users can test their knowledge through structured multi-choice questions, navigate through an interactive game flow, and view real-time results."
+        "description": "A dynamic, web-based quiz platform built with ASP.NET Core MVC. Users can test their knowledge through structured multi-choice questions, navigate through an interactive game flow, and view real-time results.",
+        "showmore": "Read More",
+        "showless": "Read Less"
         },
         "projectFour": {
         "title": "Movie website",
-        "description": "Using HTML, CSS and JavaScript with API to create a movie website that allows users to browse and search for movies and view details. The site is designed to be responsive and user-friendly, providing an engaging experience across all devices."
+        "description": "Using HTML, CSS and JavaScript with API to create a movie website that allows users to browse and search for movies and view details. The site is designed to be responsive and user-friendly, providing an engaging experience across all devices.",
+        "showmore": "Read More",
+        "showless": "Read Less"
         },
         "projectFive": {
         "title": "Portfolio Website",
-        "description": "A personal portfolio website built with React and Tailwind CSS to showcase my skills, projects and contact information in a clean and responsive layout."
+        "description": "A personal portfolio website built with React and Tailwind CSS to showcase my skills, projects and contact information in a clean and responsive layout.",
+        "showmore": "Read More",
+        "showless": "Read Less"
         },
         "projectSix": {
         "title": "CineVerse",
-        "description": "A modern movie discovery app built with React and Tailwind CSS, powered by the TMDB API. Users can browse popular movies, trending movies, upcoming movies, browse by genre, search for specific titles, and view detailed information about each film."
+        "description": "A modern movie discovery app built with React and Tailwind CSS, powered by the TMDB API. Users can browse popular movies, trending movies, upcoming movies, browse by genre, search for specific titles, and view detailed information about each film.",
+        "showmore": "Read More",
+        "showless": "Read Less"
         }
     },
   "footer": {

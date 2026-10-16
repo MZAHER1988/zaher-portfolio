@@ -13,6 +13,7 @@ import { useEffect, useState } from "react";
 export default function Projects() {
   const { t } = useTranslation();
   const [slidesToShow, setSlidesToShow] = useState(3);
+  const [expanded, setExpanded] = useState(null); // state to track which project description is expanded
 
   // handle responsive slidesToShow based on window width
   useEffect(() => {
@@ -60,6 +61,8 @@ export default function Projects() {
       image: image1,
       title: t("projects.projectOne.title"),
       description: t("projects.projectOne.description"),
+      showmore: t("projects.projectOne.showmore"),
+      showless: t("projects.projectOne.showless"),
       tech: ["C#", ".NET", "Windows Forms"],
       github: "https://github.com/MZAHER1988/FileManager",
       liveDemo: null,
@@ -69,6 +72,8 @@ export default function Projects() {
       image: image2,
       title: t("projects.projectTwo.title"),
       description: t("projects.projectTwo.description"),
+      showmore: t("projects.projectTwo.showmore"),
+      showless: t("projects.projectTwo.showless"),
       tech: ["C#", "Windows Forms", "API"],
       github: null,
       liveDemo: null,
@@ -78,6 +83,8 @@ export default function Projects() {
       image: image3,
       title: t("projects.projectThree.title"),
       description: t("projects.projectThree.description"),
+      showmore: t("projects.projectThree.showmore"),
+      showless: t("projects.projectThree.showless"),
       tech: ["C#", ".NET9", "ASP.NET Core MVC", "Entity Framework Core", "SQL Server", "HTML", "CSS"],
       github: "https://github.com/MZAHER1988/quiz-app-fullstack",
       liveDemo: "https://quizora.runasp.net/",
@@ -87,6 +94,8 @@ export default function Projects() {
       image: image4,
       title: t("projects.projectFour.title"),
       description: t("projects.projectFour.description"),
+      showmore: t("projects.projectFour.showmore"),
+      showless: t("projects.projectFour.showless"),
       tech: ["HTML", "CSS", "JavaScript", "API"],
       github: null,
       liveDemo: null,
@@ -96,6 +105,8 @@ export default function Projects() {
       image: image5,
       title: t("projects.projectFive.title"),
       description: t("projects.projectFive.description"),
+      showmore: t("projects.projectFive.showmore"),
+      showless: t("projects.projectFive.showless"),
       tech: ["React", "i18next", "Tailwind CSS"],
       github: "https://github.com/MZAHER1988/zaher-portfolio",
       liveDemo: null,
@@ -105,6 +116,8 @@ export default function Projects() {
       image: image6,
       title: t("projects.projectSix.title"),
       description: t("projects.projectSix.description"),
+      showmore: t("projects.projectSix.showmore"),
+      showless: t("projects.projectSix.showless"),
       tech: ["React", "JavaScript", "TailwindCSS", "Vite", "TMDB API"],
       github: "https://github.com/MZAHER1988/CineVerse",
       liveDemo: "https://cineverse-movie.pages.dev/",
@@ -134,16 +147,26 @@ export default function Projects() {
                   className="w-full h-40 sm:h-48 md:h-52 lg:h-56 object-cover object-center"
                   loading="lazy"
                 />
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   <h3 className="tracking-widest text-xl title-font font-medium text-yellow-400 mb-1">
                     {project.title}
                   </h3>
-                  <p dir="auto" className="leading-relaxed mb-3">
+                  <p dir="auto" className={`leading-relaxed mb-2 text-white/80 text-justify ${expanded === project.id ? "" : "line-clamp-4"}`}>
                     {project.description}
                   </p>
+                  {project.description.length > 150 && (
+                    <button
+                    onClick={() => setExpanded(expanded === project.id ? null : project.id)}
+                    className="text-orange-400 hover:text-yellow-400 font-semibold text-sm mb-3"  
+                  >
+                    {expanded === project.id ? project.showless : project.showmore}
+                  </button>
+                    
+                  )}
+                  
                 </div>
 
-                {/* Code länks and programming languages */}
+                {/* Code links and programming languages */}
                 <div className="mt-auto flex justify-around gap-1 mb-4">
                   {project.github && (
                     <a
